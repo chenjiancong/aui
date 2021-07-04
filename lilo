@@ -480,9 +480,9 @@ automatic_mode(){
   print_danger "\tUse this mode only if you already know all the option.\n\tYou won't be able to select anything later."
   read_input_text "Enable Automatic Mode"
   if [[ $OPTION == y ]]; then
-    $EDITOR "${AUI_DIR}"/lilo.automode
-    # shellcheck source=/root/aui/lilo.automode
-    source "${AUI_DIR}"/lilo.automode
+    $EDITOR "${AUI_DIR}"/lilo.automode_custom
+    # shellcheck source=/root/aui/lilo.automode_custom
+    source "${AUI_DIR}"/lilo.automode_custom
     echo -e "The installation will start now."
     pause_function
     AUTOMATIC_MODE=1
